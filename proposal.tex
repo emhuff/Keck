@@ -5,12 +5,17 @@
 \usepackage{amsmath,amssymb}
 \usepackage{natbib}
 \usepackage{graphicx} 
+\usepackage[usenames]{color}
+\definecolor{Red}{rgb}{1.00,0.00,0.00}
+
 \begin{document}
 
 \shorttitle{Mass Mapping A2261 with Kinematic Weak Lensing}
 \shortauthors{Schlegel, et al.}
 
 \section{Science Justification}
+
+\textcolor{Red}{MRG: I think a risk-averse TAC would better digest the Cluster Mass Mapping science first and that this section should be incorporated into the later sections explaining the lensing technique and its potential for future cosmological surveys. I don't think that improving weak lensing is an immediately interesting science case to a typical extragalactic astronomer.}
 
 \noindent {\bf Weak Lensing with the Tully-Fisher Relation.} Weak gravitational lensing has been widely touted as a powerful probe of cosmology. It is a major science driver for several large imaging surveys, such as the Dark Energy Survey (DES) the Large Synoptic Survey Telescope (LSST), and space missions such as Euclid and the Wide-Field Infrared Survey Telescope (WFIRST). Weak lensing is weak, however, and all current measurements are limited by the scatter in galaxy shapes, which is an order of magnitude or more greater than the typical weak lensing signal. 
 %This means that weak lensing analyses must average over every available galaxy image, pushing the analysis to include faint and poorly-resolved galaxies for which unbiased measurements of galaxy shapes are difficult. Precision estimates of galaxy redshifts from photometry is crucial for these analyses, as the current generation of ongoing surveys will entail sample sizes of a few $\times10^8$ galaxies, which is two orders of magnitude beyond the size of the largest existing spectroscopic samples. Percent-level biases in the photometric redshifts will have a large impact on the error budgets for this next generation of surveys.
@@ -30,7 +35,8 @@ We propose to map the projected mass distribution in the massive cluster Abell 2
 \includegraphics[width=0.3\linewidth,bb= 160 150 500 650,clip]{Plots/shear_map_kappa.pdf}
 \includegraphics[width=0.3\linewidth,bb= 160 150 500 650,clip]{Plots/shear_map_subaru.pdf}
 \includegraphics[width=0.3\linewidth,bb= 160 150 500 650,clip]{Plots/shear_map_tf.pdf}
-\caption{{\bf Left:} mass map, from Vale \& White simulations, zoomed in on a distended $~10^{15}M_{\odot}$ cluster. {\bf Center:} Aperture mass map with shape noise properties equivalent to existing Subaru observations of A2261. {\bf Right:} Aperture mass map with shape noise properties equivalent to proposed TFR lensing survey. In both cases, we used a compensated aperture mass filter as in [REF:Schneider '98] with $\ell=1$ and the filter scale set to $3$ arcminutes. Peak values in both mass maps are at $\kappa=.08$}
+\caption{{\bf Left:} mass map, from \citet{Vale2003} simulations, zoomed in on a distended $~10^{15}M_{\odot}$ cluster. {\bf Center:} Aperture mass map with shape noise properties equivalent to existing Subaru observations of A2261. {\bf Right:} Aperture mass map with shape noise properties equivalent to proposed TFR lensing survey. In both cases, we used a compensated aperture mass filter as in \citet{Schneider1998} with $\ell=1$ and the filter scale set to $3$ arcminutes. Peak values in both mass maps are at $\kappa=.08$}
+\label{fig:massmaps}
 \end{figure}
 
 \subsection{Kinematic Weak Lensing}
@@ -60,11 +66,14 @@ Here we propose a pilot study for a new weak lensing measurement technique that 
 
 
 \subsection{Abell 2261: Precision Lensing of a Dissociative Galaxy Cluster}
+\textcolor{Red}{MRG: A2261 is not a dissociative cluster}
+
 The reduction in the shape noise promised by this technique will substantially improve weak lensing measurements of the mass distribution in massive galaxy clusters. One especially promising benefit is the improved ability to localize dark structures. 
 
 \begin{figure}[t]
 \includegraphics[width=0.45\linewidth]{Plots/a2261_deimos_mask.pdf}
 \caption{Mass map of A2261 , with proposed DEIMOS slitmask geometry superposed.}
+\label{fig:maskoverlay}
 \end{figure}
 
 
@@ -72,6 +81,11 @@ The reduction in the shape noise promised by this technique will substantially i
 \section{Technical Remarks}
 
 \subsection{Targets and Exposures}
+
+Abell 2261 ($z=0.225$, \citealt{Coe2012}) is an ideal target for testing this novel mass mapping technique since its high mass ($M_{\rm vir}\approx 2.2 \times 10^{15}\,M_{\odot}$) and moderate redshift produces a large lensing signal for background galaxies at $z\sim0.6-1.2$, and its angular size $R_{\rm vir} \approx 3\,{\rm Mpc} = 13.4\arcmin$ is well-matched to the DEIMOS field of view. We propose to cover this cluster with 4 slit masks, with most of the area covered twice by perpendicular masks to allow repeat observations of targets with $\Delta P.A.=90\degr$ (Figure~\ref{fig:maskoverlay}). This will enable us to measure velocities along both photometric axes to better constrain the shear.
+
+Abell 2261 is part of the CLASH sample \citep{Postman2012} which obtained multi-wavelength HST data for the inner $\sim3\arcmin$ and has existing Subaru data in B, V, and R bands. We will target galaxies behind the cluster using a BVR color selection modeled on the DEEP2 BRI selection \citep{Newman2013} which successfully identified a large sample of high redshift galaxies and measured rotation curves using the [OII] emission line. To resolve the [OII] doublet, we will use the 1200 line/mm grating. The line flux needed for measuring kinematics with the DEIMOS configuration used by DEEP2 is $\gtrsim10^{-17}\,{\rm erg/s/cm^2}$ \citep{Kassin2012}. Using COSMOS data \citep{Jouvel2009}, we find that a BVR color selection from Subaru photometry with a target density of $1.5-2\,{\rm arcmin^{-2}}$ can efficiently select resolved ($r_{1/2}>0.5\arcsec$) galaxies at $z\sim0.6-1.2$ with [OII] fluxes above this threshold. This strategy should produce a sample of $>100$ galaxies with two-dimensional kinematics measured at $z\sim0.9$. To ensure sufficient ${\rm S/N}$ in velocity measurements along both axes, we request \textbf{2 hour exposures $\times$ 4 masks = 8 hours shutter time}. [Morphology cuts?]
+
 
 \subsection{Backup Program}
 
@@ -81,7 +95,7 @@ The reduction in the shape noise promised by this technique will substantially i
 
 
 
-% The following sections are optional but highly recommended
+\textcolor{Red}{The following sections are optional but highly recommended}
 \subsection{Path to Science from Observations}
 
 \subsection{Technical Concerns}
