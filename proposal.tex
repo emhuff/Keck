@@ -4,6 +4,7 @@
 \usepackage{amsmath,amssymb}
 \usepackage{natbib}
 \usepackage{graphicx} 
+\usepackage{setspace}
 \usepackage[usenames]{color}
 \definecolor{Red}{rgb}{1.00,0.00,0.00}
 
@@ -34,7 +35,7 @@ We propose to map the projected mass distribution in the massive cluster Abell 2
 \includegraphics[width=0.3\linewidth,bb= 160 150 500 650,clip]{Plots/shear_map_kappa.pdf}
 \includegraphics[width=0.3\linewidth,bb= 160 150 500 650,clip]{Plots/shear_map_subaru.pdf}
 \includegraphics[width=0.3\linewidth,bb= 160 150 500 650,clip]{Plots/shear_map_tf.pdf}
-\caption{{\bf Left:} mass map, from \citet{Vale2003} simulations, zoomed in on a distended $~10^{15}M_{\odot}$ cluster. {\bf Center:} Aperture mass map with shape noise properties equivalent to existing Subaru observations of A2261. {\bf Right:} Aperture mass map with shape noise properties equivalent to proposed TFR lensing survey. In both cases, we used a compensated aperture mass filter as in \citet{Schneider1998} with $\ell=1$ and the filter scale set to $3$ arcminutes. Peak values in both mass maps are at $\kappa=.08$}
+\caption{\footnotesize {\bf Left:} mass map, from \citet{Vale2003} simulations, zoomed in on a distended $~10^{15}M_{\odot}$ cluster. {\bf Center:} Aperture mass map with shape noise properties equivalent to existing Subaru observations of A2261. {\bf Right:} Aperture mass map with shape noise properties equivalent to proposed TFR lensing survey. In both cases, we used a compensated aperture mass filter as in \citet{Schneider1998} with $\ell=1$ and the filter scale set to $3$ arcminutes. Peak values in both mass maps are at $\kappa=.08$}
 \label{fig:massmaps}
 \end{figure}
 
@@ -57,7 +58,7 @@ Here we propose a pilot study for a new weak lensing measurement technique that 
 
 \begin{figure}[t]
 \includegraphics[width=0.45\linewidth, bb= 150 150 550 650,clip]{Plots/vcirc_error.pdf}
-\caption{Effective shape noise $\sigma_{TF}$ as a  function of the
+\caption{\footnotesize Effective shape noise $\sigma_{TF}$ as a  function of the
   measurement error on the disk circular velocity.}
 \label{fig:shapeNoise}
 \end{figure}
@@ -71,7 +72,7 @@ The reduction in the shape noise promised by this technique will substantially i
 
 \begin{figure}[t]
 \includegraphics[width=0.45\linewidth]{Plots/a2261_deimos_mask.pdf}
-\caption{Mass map of A2261 , with proposed DEIMOS slitmask geometry superposed.}
+\caption{\footnotesize Mass map of A2261 , with proposed DEIMOS slitmask geometry superposed.}
 \label{fig:maskoverlay}
 \end{figure}
 
@@ -103,7 +104,10 @@ Abell 2261 is part of the CLASH sample \citep{Postman2012} which obtained multi-
 
 \subsection{Resources and Publication Timescale}
 
+\renewcommand{\bibfont}{\footnotesize}
+\begin{spacing}{0.}
 \bibliographystyle{apj}
 \bibliography{proposal}
+\end{spacing}
 
 \end{document}
