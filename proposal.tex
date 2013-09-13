@@ -5,6 +5,8 @@
 \usepackage{natbib}
 \usepackage{graphicx} 
 \usepackage{setspace}
+\usepackage{float}
+\usepackage{subfig}
 \usepackage[usenames]{color}
 \definecolor{Red}{rgb}{1.00,0.00,0.00}
 
@@ -22,28 +24,9 @@ The mass distribution in galaxy clusters is a crucial test of our cosmological p
 
 We propose to map the projected mass distribution in the massive cluster Abell 2261 with a new lensing techinque that uses kinematic measurements of background sources to drastically improve the signal-to-noise (${\rm S/N}$) per galaxy. The typical weak lensing shear signal averaged within the virial radius of a massive cluster ($g_t\sim0.05$) is small compared to the distribution of intrinsic shapes in imaging (which has scatter $\sigma_\gamma\sim0.25$). Kinematic information can be used to infer the intrinsic shape and orientation of the background galaxies, potentially reducing the shape noise per galaxy by a factor of ten. This enables ${\rm S/N}\gtrsim1$ measurements of shear per galaxy. With such precision we will improve the spatial resolution of mass maps and extend the precision of strong lensing out to the weak regime near the virial radius of the cluster.  We plan to create a joint mass reconstruction combining our kinematic lensing measurements with existing shear measurements from Suprime-Cam and HST data to exploit the synergies between the denser sampling of the mass field with traditional weak lensing and the higher individual S/N from the kinematic measurements. We discuss the kinematic technique and its potential for improving both the precision and accuracy of future large-scale lensing experiments in the next section. Additionally, the slit spectra taken at two position angles for hundreds of sources behind A2261 will provide two-dimensional kinematics of emission line disk galaxies, greatly enhancing the sample size at that redshift for studying evolution of galaxy kinematics and the Tully-Fisher relation (TFR).
 
-\begin{figure}[t]
-\begin{center}
-\includegraphics[width=0.3\linewidth,bb= 160 150 500 650,clip]{Plots/shear_map_kappa.pdf}
-\includegraphics[width=0.3\linewidth,bb= 160 150 500 650,clip]{Plots/shear_map_subaru.pdf}
-\includegraphics[width=0.3\linewidth,bb= 160 150 500 650,clip]{Plots/shear_map_tf.pdf}
-\caption{\footnotesize {\bf Left:} mass map, from \citet{Vale2003} simulations, zoomed in on an extended $~10^{15}M_{\odot}$ cluster. {\bf Center:} Aperture mass map with shape noise properties equivalent to existing Subaru observations of A2261. {\bf Right:} Aperture mass map with shape noise properties equivalent to proposed TFR lensing survey. Aperture scale is tuned for the latter two to optimize signal-to-noise and resolution. Peak observed $\kappa$ values are approximately .07.}
-\label{fig:massmaps}
-\end{center}
-\end{figure}
-
 \subsection{Kinematic Weak Lensing}
 
 The utility of kinematic maps for weak lensing was originally described by \citet{Blain2002} and \citet{Morales2006}, who forecasted constraints from high ${\rm S/N}$, high spatial resolution observations with future radio arrays. The basic idea for the kinematic shear observables is described in Figure~\ref{fig:vmaps}. In an image, an inclined rotating circular disk has elliptical isophotes. When the image of this galaxy is sheared, the isophotes remain elliptical (in the weak shear limit, ($|g_t|\ll1$) with a new axis ratio and position angle. New photometric axes are inferred from this ellipse in the sheared image, and information about the original axes is lost. The case is different however, with kinematic measurements. The unsheared circular disk has kinematic axes that are perpendicular to one another and are aligned with the unsheared photometric axes. This cross shape becomes skewed when the velocity map is sheared; the kinematic axes are no longer perpendicular and they are misaligned with the photometric axes inferred from the sheared isophotal ellipse in the imaging data.
-
-\begin{figure}[t]
-\begin{center}
-\includegraphics[width=0.45\linewidth]{Plots/fig1a.pdf}
-\includegraphics[width=0.45\linewidth]{Plots/fig1b.pdf}
-\caption{Effects of shear on kinematic maps of an inclined disk galaxy (Left: unsheared, Right: sheared). Colors show velocity map, and white contours show a single image isophote. A shear applied at $45\degr$ to the disk major axis misaligns the kinematic axes (white dashed lines) and photometric axes (gray solid lines). Effect is illustrated for a shear with amplitude $|\gamma|$=0.1.}
-\label{fig:vmaps}
-\end{center}
-\end{figure}
 
 Full two-dimensional kinematic maps are not required for this measurement, and our approach adds to the previous discussion by incorporating information from the TFR, an empirical scaling relation for disk galaxies between their luminosity and circular velocity $v_{\rm circ}$. With slit spectroscopy, the measured amplitude of a rotation curve is related to the true circular velocity by $v_{\rm obs} = v_{\rm circ} \sin i$, where $i$ is the inclination of the disk toward the observer. Thus the offset between $v_{\rm obs}$ and $v_{\rm circ}$ predicted from the TFR gives a kinematic estimate of $\sin i$. A photometric estimate of $\sin i$ can be obtained from the ellipticity of the image. The difference between both estimates of $\sin i$ gives an estimate of the shear.
 
@@ -57,26 +40,55 @@ In addition to its uses in mapping individual structures, statistical weak lensi
 
 This project will substantially increase the sample size of galaxies with measured two-dimensional kinematics at $z=0.6-1.2$. Existing IFU surveys at these redshifts include IMAGES \citep[N=63;][]{Flores2006, Yang2008} and MASSIV \citep[N=84;][]{Contini2012}. There are some discrepancies between the TFR inferred from these IFU data and from DEIMOS slit spectra \citep[e.g. Figure 12 of][]{Kassin2012}. Our data will help resolve whether these offsets are due to differences in sample selection, slit position angle offsets, or unrelaxed kinematics which are easier to identify in two-dimensions. With [OII], H$\beta$, and [OIII] for our primary targets (depending on redshift) and H$\alpha$ for any interlopers from the foreground cluster at $z=0.225$, we can also probe the spatial distribution of line emission, metallicity, and star-formation, allowing a better understanding of feedback, shocks, outflows, and mergers. The multi-wavelength HST imaging available in the inner portion of the field will enable precise bulge-disk decomposition for improved kinematic modeling. Our sample is selected to lie behind a massive cluster making it unique among these data sets for our lensing goals, but is sufficiently distant that the local environment of our targets will be a fair sample for comparison with other field studies.
 
+\newpage
 
-\begin{figure}[t]
+\begin{figure}[H]
 \begin{center}
-\includegraphics[width=0.45\linewidth, bb= 150 150 550 650,clip]{Plots/vcirc_error.pdf}
-\caption{\footnotesize Effective shape noise $\sigma_{TF}$ as a  function of the
-  measurement error on the disk circular velocity.}
-\label{fig:shapeNoise}
+\includegraphics[width=0.3\linewidth,bb= 160 150 500 650,clip]{Plots/shear_map_kappa.pdf}
+\includegraphics[width=0.3\linewidth,bb= 160 150 500 650,clip]{Plots/shear_map_subaru.pdf}
+\includegraphics[width=0.3\linewidth,bb= 160 150 500 650,clip]{Plots/shear_map_tf.pdf}
+\caption{\footnotesize {\bf Left:} mass map, from \citet{Vale2003} simulations, zoomed in on an extended $~10^{15}M_{\odot}$ cluster. {\bf Center:} Aperture mass map with shape noise properties equivalent to existing Subaru observations of A2261. {\bf Right:} Aperture mass map with shape noise properties equivalent to proposed TFR lensing survey. Aperture scale is tuned for the latter two to optimize signal-to-noise and resolution. Peak observed $\kappa$ values are approximately .07.}
+\label{fig:massmaps}
 \end{center}
 \end{figure}
 
 
-\begin{figure}[t]
+\begin{figure}[H]
 \begin{center}
-\includegraphics[width=0.45\linewidth]{Plots/a2261_deimos_mask.pdf}
-\caption{\footnotesize Mass map of A2261 , with proposed DEIMOS slitmask geometry superposed.}
-\label{fig:maskoverlay}
+\includegraphics[width=0.49\linewidth]{Plots/fig1a.pdf}
+\includegraphics[width=0.49\linewidth]{Plots/fig1b.pdf}
+\caption{Effects of shear on kinematic maps of an inclined disk galaxy (Left: unsheared, Right: sheared). Colors show velocity map, and white contours show a single image isophote. A shear applied at $45\degr$ to the disk major axis misaligns the kinematic axes (white dashed lines) and photometric axes (gray solid lines). Effect is illustrated for a shear with amplitude $|\gamma|$=0.1.}
+\label{fig:vmaps}
 \end{center}
 \end{figure}
 
+\begin{figure}[H]
+  \parbox{0.45\linewidth}{
+    \begin{center}
+    \includegraphics[width=\linewidth, bb= 150 150 590 650,clip]{Plots/vcirc_error.pdf}
+    \caption{\footnotesize Effective shape noise $\sigma_{TF}$ as a  function of the
+      measurement error on the disk circular velocity.}
+    \label{fig:shapeNoise}
+    \end{center}
+  }
+  \qquad
+  \begin{minipage}{0.45\linewidth}
+    \begin{center}
+    \includegraphics[width=0.85\linewidth]{Plots/a2261_deimos_mask.pdf}
+    \caption{\footnotesize Mass map of A2261 , with proposed DEIMOS slitmask geometry superposed.}
+    \label{fig:maskoverlay}
+    \end{center}
+  \end{minipage}
+\end{figure}
 
+
+\renewcommand{\bibfont}{\scriptsize}
+\begin{spacing}{0}
+\bibliographystyle{apj}
+\bibliography{proposal}
+\end{spacing}
+
+\newpage
 
 \section{Technical Remarks}
 
@@ -154,11 +166,5 @@ Postman, M., et al., 2012, ApJS, 199, 25
 
 \subsection{Resources and Publication Timescale}
 \textcolor{Red}{TO DO:}
-
-\renewcommand{\bibfont}{\footnotesize}
-\begin{spacing}{0.}
-\bibliographystyle{apj}
-\bibliography{proposal}
-\end{spacing}
 
 \end{document}
